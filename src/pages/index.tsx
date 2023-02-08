@@ -111,11 +111,10 @@ function LinkCard({
             <Image
               className="rounded-sm"
               alt={title}
-              src={
-                image.includes("logos_linkedin-icon.svg")
-                  ? linkedinImage
-                  : image
-              }
+              src={image.includes("logos_linkedin-icon.svg")
+              ? linkedinImage
+              : image.includes("ant-design_github-filled.svg") ? gitHubImage : instagramImage
+            }
               width={40}
               height={40}
             />
@@ -144,11 +143,16 @@ export default function Home() {
         <LinkCard key={link.href} {...link} />
       ))}
       {data.socials.map((link) => {
-        if (link.href.includes('LinkedIn')) {
-          return <LinkedinIcon />
+        if (link.href.includes("LinkedIn")) {
+          return <LinkedinIcon />;
         }
-      }
-      )}
+        if (link.href.includes("GitHub")) {
+          return <GithubIcon />;
+        }
+        if (link.href.includes("Instagram")) {
+          return <InstagramIcon />;
+        }
+      })}
     </div>
   );
 }
