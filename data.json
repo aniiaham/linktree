@@ -4,11 +4,18 @@
     "links": [
         {
             "title": "LinkedIn",
-            "href": "https://www.linkedin.com/in/aniia-hamilton/"
+            "href": "https://www.linkedin.com/in/aniia-hamilton/",
+            "image": "logos_linkedin-icon.svg"
         },
         {
             "title": "GitHub",
-            "href": "https://github.com/aniiaham"
+            "href": "https://github.com/aniiaham",
+            "image": "ant-design_github-filled.svg"
+        },
+        {
+            "title": "Instagram",
+            "href": "https://www.instagram.com/aniiahamilton/",
+            "image": "skill-icons_instagram.svg"
         }
     ],
     "socials": [
