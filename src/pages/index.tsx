@@ -8,8 +8,8 @@ import instagramImage from "../../public/icons/skill-icons_instagram.svg";
 function InstagramIcon() {
   return (
     <svg
-      width="256"
-      height="256"
+      width="30"
+      height="30"
       viewBox="0 0 256 256"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -60,8 +60,8 @@ function InstagramIcon() {
 function GithubIcon() {
   return (
     <svg
-      width="256"
-      height="256"
+      width="30"
+      height="30"
       viewBox="0 0 256 256"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -77,8 +77,8 @@ function GithubIcon() {
 function LinkedinIcon() {
   return (
     <svg
-      width="256"
-      height="256"
+      width="30"
+      height="30"
       viewBox="0 0 256 256"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -142,17 +142,19 @@ export default function Home() {
       {data.links.map((link) => (
         <LinkCard key={link.href} {...link} />
       ))}
+      <div className="flex items-center gap-4 mt-8">
       {data.socials.map((link) => {
-        if (link.href.includes("LinkedIn")) {
+        if (link.href.includes("linkedin")) {
           return <LinkedinIcon />;
         }
-        if (link.href.includes("GitHub")) {
+        if (link.href.includes("github")) {
           return <GithubIcon />;
         }
-        if (link.href.includes("Instagram")) {
+        if (link.href.includes("instagram")) {
           return <InstagramIcon />;
         }
       })}
+      </div>
     </div>
   );
 }
