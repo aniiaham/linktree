@@ -65,12 +65,10 @@ function LinkCard({
   href,
   title,
   image,
-  description
 }: {
   href: string;
   title: string;
   image?: string;
-  description: string;
 }) {
   return (
     <a
