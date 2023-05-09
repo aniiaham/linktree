@@ -119,7 +119,6 @@ export default function Home() {
       <div className="flex items-center gap-4 mt-8 text-white">
         {data.socials.map((link) => {
           if (link.href.includes("t.me")) {
-            console.log(link.href);
             return <TelegramIcon key={link.href} {...link} />;
           }
           if (link.href.includes("github")) {
